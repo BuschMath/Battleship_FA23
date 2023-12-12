@@ -9,6 +9,11 @@ Grid::Grid()
 	initializeGrid(computerShotGrid);
 }
 
+void Grid::getPlayerShipGrid(char grid[10][10])
+{
+	grid = playerShipGrid;
+}
+
 void Grid::printAllGrids()
 {
 	std::cout << "Player Ship Grid" << std::endl;
@@ -30,8 +35,17 @@ void Grid::printAllGrids()
 
 void Grid::printGrid(char grid[10][10])
 {
+	std::cout << "  ";
 	for (int i = 0; i < 10; i++)
 	{
+		std::cout << i << " ";
+	}
+
+	std::cout << std::endl;
+
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << i << " ";
 		for (int j = 0; j < 10; j++)
 		{
 			std::cout << grid[i][j] << " ";

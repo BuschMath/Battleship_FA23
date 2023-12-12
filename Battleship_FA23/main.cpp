@@ -1,21 +1,13 @@
 #include <iostream>
-#include "Grid.h"
-#include "Ship.h"
+#include "BattleshipGame.h"
 
 int main()
 {
-	//Grid grid;
+	BattleshipGame game;
 
-	//grid.printAllGrids();
+	game.placeShip();
 
-	Ship fleet[5];
-
-	fleet[0].setName("Carrier");
-	fleet[0].setHp(5);
-	fleet[0].setLength(5);
-
-	fleet[1].setName("Battleship");
-
+	game.printAllGrids();
 
 	return 0;
 }

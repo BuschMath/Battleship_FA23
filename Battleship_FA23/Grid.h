@@ -6,6 +6,8 @@ class Grid
 public:
 	Grid();
 
+	void getPlayerShipGrid(char grid[10][10]);
+
 	void printAllGrids();
 
 private:
