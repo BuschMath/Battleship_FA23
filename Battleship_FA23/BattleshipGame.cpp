@@ -21,24 +21,8 @@ void BattleshipGame::placeShip()
 	playerFleet[0].setYLoc(y);
 	playerFleet[0].setIsHorizontal(bool(direction));
 
-	char playerShipGrid[10][10];
-
-	gameGrid.getPlayerShipGrid(playerShipGrid);
-
-	if (playerFleet[0].getIsHorizontal())
-	{
-		for (int i = 0; i < playerFleet[0].getLength(); i++)
-		{
-			playerShipGrid[y][x + i] = '#';
-		}
-	}
-	else
-	{
-		for (int i = 0; i < playerFleet[0].getLength(); i++)
-		{
-			playerShipGrid[y + i][x] = '#';
-		}
-	}
+	gameGrid.placeShip(playerFleet[0].getXLoc(), playerFleet[0].getYLoc(), playerFleet[0].getLength(), 
+		playerFleet[0].getIsHorizontal());
 }
 
 void BattleshipGame::printAllGrids()

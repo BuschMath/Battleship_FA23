@@ -6,7 +6,7 @@ class Grid
 public:
 	Grid();
 
-	void getPlayerShipGrid(char grid[10][10]);
+	void placeShip(int x, int y, int size, bool isHorizontal);
 
 	void printAllGrids();
 

@@ -9,9 +9,22 @@ Grid::Grid()
 	initializeGrid(computerShotGrid);
 }
 
-void Grid::getPlayerShipGrid(char grid[10][10])
+void Grid::placeShip(int x, int y, int size, bool isHorizontal)
 {
-	grid = playerShipGrid;
+	if (isHorizontal)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			playerShipGrid[x][y + i] = '#';
+		}
+	}
+	else
+	{
+		for (int i = 0; i < size; i++)
+		{
+			playerShipGrid[x + i][y] = '#';
+		}
+	}
 }
 
 void Grid::printAllGrids()
